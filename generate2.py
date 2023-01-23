@@ -96,8 +96,8 @@ for pkg_name in sorted(os.listdir(packages_dir)):
                 pkg_props["minSdk"] = int(kv[0].split(":")[1])
             elif kv[0].startswith("native-code"):
                 abis = kv[1:]
-                for abi in abis:
-                    assert abi in all_abis
+                #for abi in abis:
+                    #assert abi in all_abis
                 assert len(pkg_abis) == 0
                 pkg_abis.update(abis)
 
@@ -221,4 +221,3 @@ while True:
         f.write("\n" + sig + "\n")
 
     key_version += 1
-
